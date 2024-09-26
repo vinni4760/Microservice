@@ -1,0 +1,7 @@
+server:
+ port: 8082
+ 
+management:
+  tracing:
+    sampling:
+      probability: 1.0

@@ -1,0 +1,15 @@
+server:
+ port: 8083
+ 
+spring:
+  cloud:
+   gateway :
+     routes:
+        - id: department-service
+          uri: lb://department-service
+          predicates: 
+          - Path=/department/**
+        - id  : employe-service
+          uri: lb://employe-service
+          predicates: 
+          - Path=/employe/**
